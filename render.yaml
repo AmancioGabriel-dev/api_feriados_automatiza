@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: api-feriados-automatiza
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: 5432
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+
+databases:
+  - name: api-feriados-db
+    databaseName: feriados_db
+    user: feriados_user

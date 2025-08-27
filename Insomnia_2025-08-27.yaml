@@ -1,0 +1,276 @@
+type: collection.insomnia.rest/5.0
+name: API Holidays Automatiza
+meta:
+  id: wrk_7aed5d632c0a4ae5b18691f6efbc2a02
+  created: 1756212894282
+  modified: 1756212894282
+collection:
+  - name: holiday_cx
+    meta:
+      id: fld_9d02662e59f54e2487ceb163a4c3fb0d
+      created: 1756212927735
+      modified: 1756219433805
+      sortKey: -1756212927735
+    children:
+      - url: http://localhost:3333/holidayscx
+        name: Index
+        meta:
+          id: req_9d3602538b4b48fb9c6626d900ba3a76
+          created: 1756212946776
+          modified: 1756222397951
+          isPrivate: false
+          sortKey: -1756212946776
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/holidayscx
+        name: Create
+        meta:
+          id: req_3a10ab9edb324fe98f196a23f63ce989
+          created: 1756220989824
+          modified: 1756303553835
+          isPrivate: false
+          sortKey: -1756220989824
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"holiday_name" : "Dia de São José",
+            	"day" : 19,
+            	"month" : 3,
+            	"optional" : false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/holidayscx/22
+        name: Remove
+        meta:
+          id: req_1ddf303a60fe4266bf804d846c3ae855
+          created: 1756221858114
+          modified: 1756222401613
+          isPrivate: false
+          sortKey: -1756221858114
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: holiday_the
+    meta:
+      id: fld_85bd65edb6534dddb9e9b38440499a1f
+      created: 1756302172778
+      modified: 1756302172778
+      sortKey: -1756302172778
+    children:
+      - url: http://localhost:3333/holidaysthe
+        name: Index
+        meta:
+          id: req_7b3e544baab14ab180db55efbc24202e
+          created: 1756302176107
+          modified: 1756302198424
+          isPrivate: false
+          sortKey: -1756302176107
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/holidaysthe
+        name: Create
+        meta:
+          id: req_c6e96505c9a141178d0eb4c16d545dd9
+          created: 1756302233963
+          modified: 1756302357764
+          isPrivate: false
+          sortKey: -1756262017110.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"holiday_name" : "Dia do Gabriel",
+            	"day" : 30,
+            	"month" : 9,
+            	"optional" : false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/holidaysthe/33
+        name: Delete
+        meta:
+          id: req_689ef10123fa415ebcde82a58225abbe
+          created: 1756302383065
+          modified: 1756302396763
+          isPrivate: false
+          sortKey: -1756241937612.25
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"holiday_name" : "Dia do Gabriel",
+            	"day" : 30,
+            	"month" : 9,
+            	"optional" : false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: holiday_slz
+    meta:
+      id: fld_711b9e8119084fa081ea2b71434465a9
+      created: 1756302848163
+      modified: 1756302848163
+      sortKey: -1756257550256.5
+    children:
+      - url: http://localhost:3333/holidaysslz
+        name: Index
+        meta:
+          id: req_a6c4f0e507e24ca6bbcb9b7c7c68104a
+          created: 1756302848164
+          modified: 1756302855152
+          isPrivate: false
+          sortKey: -1756302176107
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/holidaysslz/33
+        name: Delete
+        meta:
+          id: req_0919f0dc6359448792a10c583c18d5fb
+          created: 1756302848165
+          modified: 1756302868509
+          isPrivate: false
+          sortKey: -1756241937612.25
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"holiday_name" : "Dia do Gabriel",
+            	"day" : 30,
+            	"month" : 9,
+            	"optional" : false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/holidaysslz
+        name: Create
+        meta:
+          id: req_a19fb9b09ae74f6f8054f6f3bfe9f0bf
+          created: 1756302848165
+          modified: 1756302862412
+          isPrivate: false
+          sortKey: -1756262017110.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"holiday_name" : "Dia do Gabriel",
+            	"day" : 30,
+            	"month" : 9,
+            	"optional" : false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5bf8b13e4fd1c164144250ac5d2ef8bf21232b10
+    created: 1756212894287
+    modified: 1756212894287
+environments:
+  name: Base Environment
+  meta:
+    id: env_5bf8b13e4fd1c164144250ac5d2ef8bf21232b10
+    created: 1756212894285
+    modified: 1756212894285
+    isPrivate: false
