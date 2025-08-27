@@ -1,4 +1,4 @@
-import { HolidayTheController } from "@/controllers/holidays-the-controller";
+import { HolidayTheController } from "../controllers/holidays-the-controller";
 import { Router } from "express";
 
 const holidaysTheRoutes = Router()

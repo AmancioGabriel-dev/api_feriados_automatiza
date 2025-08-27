@@ -1,3 +1,5 @@
+import path from 'path';
+
 // Verificar se as variáveis do PostgreSQL estão disponíveis
 const hasPostgresConfig = process.env.DB_HOST && process.env.DB_USER && process.env.DB_PASSWORD && process.env.DB_NAME;
 
@@ -25,7 +27,7 @@ const config = {
             database: process.env.DB_NAME,
         }
         : {
-            filename: "./src/database/database.db",
+            filename: path.resolve(__dirname, 'src/database/database.db'),
         },
     pool: {
         afterCreate: (connection: any, done: any) => {
@@ -44,11 +46,11 @@ const config = {
     useNullAsDefault: true,
     migrations: {
         extensions: "ts",
-        directory: "./src/database/migrations"
+        directory: path.resolve(__dirname, 'src/database/migrations')
     },
     seeds: {
         extensions: "ts",
-        directory: "./src/database/seeds"
+        directory: path.resolve(__dirname, 'src/database/seeds')
     }
 };
 

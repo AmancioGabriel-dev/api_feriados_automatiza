@@ -34,6 +34,23 @@ chmod +x render-build.sh && ./render-build.sh
 npm start
 ```
 
+## Verificação do Deploy
+
+Após o deploy, verifique se:
+
+1. ✅ O arquivo `dist/server.js` foi gerado
+2. ✅ As migrations foram executadas (se as variáveis do banco estiverem definidas)
+3. ✅ O servidor está rodando na porta correta
+4. ✅ As rotas estão funcionando
+
+## Troubleshooting
+
+Se ainda aparecer o erro `Cannot find module '/opt/render/project/src/dist/server.js'`:
+
+1. Verifique se todas as variáveis de ambiente estão configuradas
+2. Verifique os logs do build no Render
+3. Certifique-se de que o script `render-build.sh` tem permissão de execução
+
 ## Executar Migrations e Seeds
 
 Após o deploy, você precisará executar as migrations e seeds no banco PostgreSQL. Você pode fazer isso através do console do Render ou adicionando um script de build que execute as migrations.

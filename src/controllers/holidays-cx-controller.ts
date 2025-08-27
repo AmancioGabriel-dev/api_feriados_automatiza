@@ -1,9 +1,9 @@
 // Arquivo para evitar erro de pasta vazia
 // Aqui serão adicionados os controllers da aplicação
 
-import { AppError } from "@/utils/AppError";
+import { AppError } from "../utils/AppError";
 import { Request , Response , NextFunction } from "express";
-import { knex } from "@/database/knex";
+import { knex } from "../database/knex";
 import { z } from "zod";
 
 interface HolidayCxRecord {

@@ -1,4 +1,4 @@
-import { HolidaySlzController } from "@/controllers/holidays-slz-controller";
+import { HolidaySlzController } from "../controllers/holidays-slz-controller";
 import { Router } from "express";
 
 const holidaySlzRoutes = Router()

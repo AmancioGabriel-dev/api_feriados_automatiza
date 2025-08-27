@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { HolidayCxController } from "@/controllers/holidays-cx-controller";
+import { HolidayCxController } from "../controllers/holidays-cx-controller";
 
 const holidayCxRoutes = Router()
 

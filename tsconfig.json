@@ -4,8 +4,8 @@
         "lib": ["ES2023"],
         "outDir": "./dist",
         "rootDir": ".",
-        "module": "node16",
-        "moduleResolution": "node16",
+        "module": "commonjs",
+        "moduleResolution": "node",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
@@ -14,10 +14,7 @@
         "resolveJsonModule": true,
         "declaration": true,
         "declarationMap": true,
-        "sourceMap": true,
-        "paths": {
-            "@/*" : ["./src/*"]
-        }
+        "sourceMap": true
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules", "dist"]
