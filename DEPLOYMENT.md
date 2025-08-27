@@ -9,6 +9,13 @@
 
 **IMPORTANTE:** No seu serviço web no Render, configure as seguintes variáveis de ambiente:
 
+**Opção 1 - Usando DATABASE_URL (Recomendado):**
+```
+DATABASE_URL=postgresql://username:password@host:port/database
+NODE_ENV=production
+```
+
+**Opção 2 - Usando variáveis separadas:**
 ```
 DB_HOST=seu-host-postgres
 DB_PORT=5432
@@ -18,7 +25,7 @@ DB_NAME=seu-nome-banco
 NODE_ENV=production
 ```
 
-**⚠️ CRÍTICO:** Todas as variáveis do banco (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) devem estar definidas, caso contrário o sistema tentará usar SQLite e falhará.
+**⚠️ CRÍTICO:** Pelo menos uma das opções deve estar configurada, caso contrário o sistema tentará usar SQLite e falhará.
 
 ## Comandos de Build
 

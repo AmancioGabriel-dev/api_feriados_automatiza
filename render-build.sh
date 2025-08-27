@@ -11,6 +11,7 @@ echo "🔧 Variáveis de ambiente:"
 echo "NODE_ENV: $NODE_ENV"
 echo "RENDER: $RENDER"
 echo "DB_HOST: $DB_HOST"
+echo "DATABASE_URL: $DATABASE_URL"
 
 # Instalar dependências
 npm install
@@ -19,7 +20,7 @@ npm install
 npm run build
 
 # Executar migrations apenas se as variáveis do banco estiverem definidas
-if [ -n "$DB_HOST" ]; then
+if [ -n "$DB_HOST" ] || [ -n "$DATABASE_URL" ]; then
     echo "📊 Executando migrations..."
     npm run migrate
     

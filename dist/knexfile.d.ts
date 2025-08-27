@@ -1,6 +1,6 @@
 declare const config: {
     client: string;
-    connection: {
+    connection: string | {
         host: string | undefined;
         port: number;
         user: string | undefined;
@@ -14,7 +14,7 @@ declare const config: {
         user?: undefined;
         password?: undefined;
         database?: undefined;
-    };
+    } | undefined;
     pool: {
         afterCreate: (connection: any, done: any) => void;
     };
